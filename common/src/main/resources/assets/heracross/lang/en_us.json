@@ -1,0 +1,47 @@
+{
+
+  "task.heracross.catch_pokemon": "\uD83E\uDD8B Catch a Pokémon",
+  "task.heracross.catch_pokemon.title.singular": "Catch: %s",
+  "task.heracross.catch_pokemon.desc.singular": "Capture a %s",
+  "task.heracross.catch_pokemon.desc.plural": "Capture %sx %s",
+  "setting.heracross.catch_pokemon.title": "Title Override:",
+  "setting.heracross.catch_pokemon.icon": "Icon Override:",
+  "setting.heracross.catch_pokemon.pokemon": "Pokémon:",
+  "setting.heracross.catch_pokemon.amount": "Amount:",
+
+  "task.heracross.defeat_pokemon": "\uD83D\uDCA4 Defeat a Pokémon",
+  "task.heracross.defeat_pokemon.title.singular": "Defeat: %s",
+  "task.heracross.defeat_pokemon.desc.singular": "Defeat a %s",
+  "task.heracross.defeat_pokemon.desc.plural": "Defeat %sx %s",
+  "setting.heracross.defeat_pokemon.title": "Title Override:",
+  "setting.heracross.defeat_pokemon.icon": "Icon Override:",
+  "setting.heracross.defeat_pokemon.pokemon": "Pokémon:",
+  "setting.heracross.defeat_pokemon.amount": "Amount:",
+
+  "task.heracross.lose_to_pokemon": "\uD83D\uDECF Whiteout to a Pokémon",
+  "task.heracross.lose_to_pokemon.title.singular": "Whiteout to: %s",
+  "task.heracross.lose_to_pokemon.desc.singular": "Whiteout to a %s",
+  "task.heracross.lose_to_pokemon.desc.plural": "Whiteout to %sx %s",
+  "setting.heracross.lose_to_pokemon.title": "Title Override:",
+  "setting.heracross.lose_to_pokemon.icon": "Icon Override:",
+  "setting.heracross.lose_to_pokemon.pokemon": "Pokémon:",
+  "setting.heracross.lose_to_pokemon.amount": "Amount:",
+
+  "task.heracross.encounter_pokemon": "\uD83D\uDD0E Encounter a Pokémon",
+  "task.heracross.encounter_pokemon.title.singular": "Encounter: %s",
+  "task.heracross.encounter_pokemon.desc.singular": "Encounter a %s",
+  "task.heracross.encounter_pokemon.desc.plural": "Encounter %sx %s",
+  "setting.heracross.encounter_pokemon.title": "Title Override:",
+  "setting.heracross.encounter_pokemon.icon": "Icon Override:",
+  "setting.heracross.encounter_pokemon.pokemon": "Pokémon:",
+  "setting.heracross.encounter_pokemon.amount": "Amount:",
+
+  "task.heracross.evolve_pokemon": "✨ Evolve a Pokémon",
+  "task.heracross.evolve_pokemon.title.singular": "Evolve: %s",
+  "task.heracross.evolve_pokemon.desc.singular": "Evolve a %s",
+  "task.heracross.evolve_pokemon.desc.plural": "Evolve %sx %s",
+  "setting.heracross.evolve_pokemon.title": "Title Override:",
+  "setting.heracross.evolve_pokemon.icon": "Icon Override:",
+  "setting.heracross.evolve_pokemon.pokemon": "Pokémon:",
+  "setting.heracross.evolve_pokemon.amount": "Amount:"
+}

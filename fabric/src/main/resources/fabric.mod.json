@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "heracross",
+  "version": "${version}",
+  "name": "heracross",
+  "description": "",
+  "authors": [],
+  "contact": {},
+  "license": "MIT",
+  "icon": "icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "earth.terrarium.heracross.common.Heracross::init"
+    ],
+    "client": [
+      "earth.terrarium.heracross.client.HeracrossClient::init"
+    ]
+  },
+  "mixins": [
+    "heracross.mixins.json",
+    "heracross-common.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.14.24",
+    "minecraft": ">=1.20.1"
+  }
+}
