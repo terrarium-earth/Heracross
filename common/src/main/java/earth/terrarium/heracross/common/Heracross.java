@@ -2,7 +2,9 @@ package earth.terrarium.heracross.common;
 
 import com.cobblemon.mod.common.api.Priority;
 import com.cobblemon.mod.common.api.events.CobblemonEvents;
+import earth.terrarium.heracles.api.rewards.QuestRewards;
 import earth.terrarium.heracles.api.tasks.QuestTasks;
+import earth.terrarium.heracross.common.rewards.PokemonExpReward;
 import earth.terrarium.heracross.common.tasks.*;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function1;
@@ -19,6 +21,7 @@ public class Heracross {
 		QuestTasks.register(EncounterPokemonTask.TYPE);
 		QuestTasks.register(EvolvePokemonTask.TYPE);
 		QuestTasks.register(BefriendPokemonTask.TYPE);
+		QuestRewards.register(PokemonExpReward.TYPE);
 
 		CobblemonEvents.POKEMON_CAPTURED.subscribe(Priority.NORMAL, toUnit(HeracrossEvents::onPokemonCaptured));
 		CobblemonEvents.BATTLE_VICTORY.subscribe(Priority.NORMAL, toUnit(HeracrossEvents::onBattleVictory));

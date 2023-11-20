@@ -2,14 +2,18 @@ package earth.terrarium.heracross.client;
 
 import com.cobblemon.mod.common.pokemon.Species;
 import earth.terrarium.heracles.api.client.settings.Settings;
+import earth.terrarium.heracles.api.rewards.client.QuestRewardWidgets;
 import earth.terrarium.heracles.api.tasks.QuestTaskDisplayFormatter;
 import earth.terrarium.heracles.api.tasks.client.QuestTaskWidgets;
 import earth.terrarium.heracles.api.tasks.client.display.TaskTitleFormatter;
 import earth.terrarium.heracles.api.tasks.client.display.TaskTitleFormatters;
 import earth.terrarium.heracles.common.handlers.progress.TaskProgress;
 import earth.terrarium.heracross.client.settings.BefriendPokemonTaskSettings;
+import earth.terrarium.heracross.client.settings.PokemonExpRewardSettings;
 import earth.terrarium.heracross.client.settings.PokemonTaskSettings;
-import earth.terrarium.heracross.client.tasks.*;
+import earth.terrarium.heracross.client.tasks.BasicPokemonTaskWidget;
+import earth.terrarium.heracross.client.tasks.PokemonExpRewardWidget;
+import earth.terrarium.heracross.common.rewards.PokemonExpReward;
 import earth.terrarium.heracross.common.tasks.*;
 import net.minecraft.ChatFormatting;
 import net.minecraft.Optionull;
@@ -27,6 +31,7 @@ public class HeracrossClient {
         QuestTaskWidgets.registerSimple(EncounterPokemonTask.TYPE, BasicPokemonTaskWidget::new);
         QuestTaskWidgets.registerSimple(EvolvePokemonTask.TYPE, BasicPokemonTaskWidget::new);
         QuestTaskWidgets.registerSimple(BefriendPokemonTask.TYPE, BasicPokemonTaskWidget::new);
+        QuestRewardWidgets.register(PokemonExpReward.TYPE, PokemonExpRewardWidget::new);
 
         TaskTitleFormatter.register(CatchPokemonTask.TYPE, HeracrossClient::getPokemonTaskTitle);
         TaskTitleFormatter.register(DefeatPokemonTask.TYPE, HeracrossClient::getPokemonTaskTitle);
@@ -48,6 +53,7 @@ public class HeracrossClient {
         Settings.register(EncounterPokemonTask.TYPE, PokemonTaskSettings.ENCOUNTER);
         Settings.register(EvolvePokemonTask.TYPE, PokemonTaskSettings.EVOLVE);
         Settings.register(BefriendPokemonTask.TYPE, BefriendPokemonTaskSettings.INSTANCE);
+        Settings.register(PokemonExpReward.TYPE, PokemonExpRewardSettings.INSTANCE);
     }
 
     private static Component getPokemonTaskTitle(PokemonTask<?, ?> task) {

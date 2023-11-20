@@ -20,23 +20,24 @@ import net.minecraft.world.item.Items;
 
 import java.util.stream.Stream;
 
-public record PokemonExpReward(String id, String title, QuestIcon<?> icon, int expAmount, boolean split) implements QuestReward<PokemonExpReward>, CustomizableQuestElement {
+public record PokemonExpReward(String id, String title, QuestIcon<?> icon, int amount, boolean split) implements QuestReward<PokemonExpReward>, CustomizableQuestElement {
+
+    public static final QuestRewardType<PokemonExpReward> TYPE = new Type();
 
     @Override
     public Stream<ItemStack> reward(ServerPlayer player) {
         PlayerPartyStore party = Cobblemon.INSTANCE.getStorage().getParty(player);
         SidemodExperienceSource source = new SidemodExperienceSource(Heracross.MOD_ID);
 
-        int amount = this.split ? expAmount / party.size() : expAmount;
         for (Pokemon pokemon : party) {
-            pokemon.addExperienceWithPlayer(player, source, amount);
+            pokemon.addExperienceWithPlayer(player, source, this.split ? amount / party.size() : amount);
         }
         return Stream.empty();
     }
 
     @Override
     public QuestRewardType<PokemonExpReward> type() {
-        return null;
+        return TYPE;
     }
 
     private static class Type implements QuestRewardType<PokemonExpReward> {
@@ -52,7 +53,7 @@ public record PokemonExpReward(String id, String title, QuestIcon<?> icon, int e
                     RecordCodecBuilder.point(id),
                     Codec.STRING.fieldOf("title").orElse("").forGetter(PokemonExpReward::title),
                     QuestIcons.CODEC.fieldOf("icon").orElse(new ItemQuestIcon(Items.AIR)).forGetter(PokemonExpReward::icon),
-                    Codec.INT.fieldOf("exp_amount").orElse(1).forGetter(PokemonExpReward::expAmount),
+                    Codec.INT.fieldOf("amount").orElse(1).forGetter(PokemonExpReward::amount),
                     Codec.BOOL.fieldOf("split").orElse(true).forGetter(PokemonExpReward::split)
             ).apply(instance, PokemonExpReward::new));
         }

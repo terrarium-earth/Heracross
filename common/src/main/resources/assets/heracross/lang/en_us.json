@@ -43,5 +43,28 @@
   "setting.heracross.evolve_pokemon.title": "Title Override:",
   "setting.heracross.evolve_pokemon.icon": "Icon Override:",
   "setting.heracross.evolve_pokemon.pokemon": "Pokémon:",
-  "setting.heracross.evolve_pokemon.amount": "Amount:"
+  "setting.heracross.evolve_pokemon.amount": "Amount:",
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  "reward.heracross.pokemon_exp": "\uD83C\uDFC5 Pokémon EXP",
+  "reward.heracross.pokemon_exp.title.singular": "Receive: Pokémon EXP",
+  "reward.heracross.pokemon_exp.desc.singular": "Receive %s Pokémon EXP point",
+  "reward.heracross.pokemon_exp.title.plural": "Receive: Pokémon EXP",
+  "reward.heracross.pokemon_exp.desc.plural": "Receive %s Pokémon EXP points",
+  "setting.heracross.pokemon_exp.title": "Title Override:",
+  "setting.heracross.pokemon_exp.icon": "Icon Override:",
+  "setting.heracross.pokemon_exp.amount": "Amount:",
+  "setting.heracross.pokemon_exp.split": "Split or Full:"
 }
